@@ -8,8 +8,8 @@ function handleSubmit(event) {
 
     var AYLIENTextAPI = require('aylien_textapi');
     var textapi = new AYLIENTextAPI({
-        application_id: process.env.APP_ID,
-        application_key: process.env.APP_KEY
+    application_id: "0aa9b1e2",
+    application_key: "44fd5c1c94e5f772553d8089aa6fb4fd"
     })
     var current = window.location.href
     var sum = document.getElementById("results"); 
