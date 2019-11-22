@@ -5,14 +5,11 @@ function handleSubmit(event) {
     let formText = document.getElementById('name').value;
     Client.checkForName(formText)
 
-
     var AYLIENTextAPI = require('aylien_textapi');
     var textapi = new AYLIENTextAPI({
     application_id: "0aa9b1e2",
     application_key: "44fd5c1c94e5f772553d8089aa6fb4fd"
-    })
-    var current = window.location.href
-    var sum = document.getElementById("results"); 
+    }) 
 
     textapi.sentiment({
       url: 'current'

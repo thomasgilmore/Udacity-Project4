@@ -7,10 +7,16 @@ const mockAPIResponse = require('./mockAPI.js')
 
 const app = express();
 
-var textapi = new aylien({
+/*var textapi = new aylien({
     application_id: process.env.API_ID,
     application_key: process.env.API_KEY
 });
+*/
+
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+  });
 
 app.use(express.static('dist'))
 
