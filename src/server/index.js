@@ -30,7 +30,7 @@ app.get('/', function (req, res) {
 app.get('/apiCall', (req, res) => {
 
   textapi.sentiment({
-     'text': 'John is a very good football player!'
+    'url': req.body.text
    }, function(error, response) {
      if (error === null) {
        console.log(response);
